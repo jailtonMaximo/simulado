@@ -1,0 +1,14 @@
+/.gradle/
+/src/main/webapp/node_modules
+*.class
+/bin/
+/build/
+/src/main/java/com/bpx/core/a_modulo/
+/src/main/webapp/js/a_modulo/
+/*.txt
+/.gitignore
+/*.gitignore
+/tgitchangelist
+/tortoisegit.data
+/tortoisegit.index
+/FETCH_HEAD
