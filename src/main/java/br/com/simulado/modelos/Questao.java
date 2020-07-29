@@ -5,15 +5,10 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -40,12 +35,6 @@ public class Questao implements Serializable {
 	
 	@Column(name = "materia")
 	private Materia materia;
-	
-	@JsonInclude(Include.NON_NULL)
-	@JsonIgnoreProperties({"alternativa"})	
-	@OneToMany(mappedBy="questao",fetch=FetchType.LAZY,orphanRemoval=true)
-	@Cascade(value={CascadeType.ALL})
-	private List<Alternativa> alternativas;
 	
 	public Long getId() {
 		return id;
